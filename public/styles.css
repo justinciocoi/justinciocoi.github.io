@@ -1,0 +1,501 @@
+/*Imports*/
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Arimo:ital,wght@0,400..700;1,400..700&family=Hind:wght@300;400;500;600;700&family=Kode+Mono:wght@400..700&family=MonteCarlo&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Arimo:ital,wght@0,400..700;1,400..700&family=Hind:wght@300;400;500;600;700&family=Kode+Mono:wght@400..700&family=MonteCarlo&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Press+Start+2P&display=swap');
+
+/*Mouse Follower Styling*/
+
+.circle{
+    position: absolute;
+    pointer-events: none;
+    border-radius: 5px;
+    width: 3px;
+    height: 3px;
+    transform: scale(0);
+    animation: growFade 1s forwards;
+    z-index: -1;
+}
+
+@keyframes growFade {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/*Div Type Styling*/
+
+body{
+    background-color: rgb(77, 79, 94);
+    color: rgb(24, 8, 80);
+    font-family: "Ubuntu", sans-serif;
+    overflow-x: hidden;
+}
+
+p{
+    margin-bottom: 0;
+}
+
+a{
+    color: rgb(86, 176, 196);
+    transition: color 0.3s;
+    display: contents;
+}
+
+a:hover{
+    color: rgb(151, 89, 151);
+    text-shadow: 1px 1px  rgba(0,0,0,0.5);
+}
+
+a:visited{
+    color: rgb(190, 161, 214);
+    text-shadow: 5px 5px rgb(0, 0, 0);
+}
+
+a:visited:hover{
+    color: rgb(156, 99, 156);
+}
+
+hr{
+    border-color: white;
+    background-color: white;
+}
+
+ul{
+    list-style-position: inside; /* Brings the bullets inside the list item */
+}
+
+ul li {
+    text-indent: -1.5em; /* Align first line with rest of text */
+    padding-left: 1.5em; /* Add space for the bullet */
+    position: relative; /* Create a reference point for pseudo-element */
+}
+
+red{
+    color: red;
+}
+
+
+/*Styling by Class*/
+
+.xScrollableBody{
+    overflow-x: scroll;
+}
+
+.background{
+    position: fixed;
+    z-index: -5;
+    opacity: 35%;
+    user-select: none;
+}
+
+.headerBoxRight{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: rgb(24, 8, 80) solid 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.headerBoxText{
+    margin-top: 0;
+}
+
+.flexBox{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60vh;
+    margin: 0;
+}
+
+.growBox{
+    height:200px;
+    width: 25vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border: rgb(19, 0, 128) solid 2px;
+    border-radius: 30px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 40px;
+    box-shadow: 5px 10px rgba(0,0,0,0.5);
+    transition: all 1.5s ease;
+}
+
+.growBox .moveText{
+    transition: all 1s ease;
+    align-self: center; /* Start centered */
+    transform: translateY(0);
+}
+
+.growBox:hover{
+    height:fit-content;
+    max-height: 800px;
+    width: 100vw;
+    box-shadow: 0px 5px rgba(0,0,0,0.5);
+    padding: 40px;
+}
+
+.growBox:hover .moveText{
+    transform: translateY(-300%);
+    opacity: 0;
+    position: absolute;
+}
+
+.growDescription{
+    font-size: large;
+    opacity: 0;
+    max-height: 0;
+    transition: all 0.4s ease;
+    transition: width 0.2s;
+}
+
+.growBox:hover .growDescription{
+    opacity: 1;
+    max-height: 1000px;
+    width: 60vw;
+    position: relative;
+}
+
+.thinBox{
+    display: none;
+    transform: translateY(-200px);
+}
+
+.thingrowBox{
+    height:200px;
+    width: 65vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    border: rgb(19, 0, 128) solid 2px;
+    border-radius: 30px;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 40px;
+    box-shadow: 5px 10px rgba(0,0,0,0.5);
+    transition: all 1s ease;
+}
+
+
+
+.thingrowBox .moveText{
+    transition: all 1s ease;
+    align-self: center; /* Start centered */
+    transform: translateY(0);
+}
+
+.thingrowBox:hover{
+    height: 150vh;
+    width: 90vw;
+}
+
+.thingrowBox:hover .moveText{
+    opacity: 0;
+    transform: translateY(-300%);
+}
+
+.thingrowDescription{
+    font-size: medium;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: all 1s; 
+    align-self: center;
+}
+
+.thingrowBox:hover .thingrowDescription{
+    opacity: 1;
+    height: auto;
+    width: 75vw;
+}
+
+.growBox::-webkit-scrollbar {
+    display: none; /* For WebKit browsers */
+  }
+
+  .thinGrowBox::-webkit-scrollbar {
+    display: none; /* For WebKit browsers */
+  }
+
+
+.listHeader{
+    margin-left: -20px;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.homeLink{
+    color: rgb(208, 252, 255);
+    margin: 3px;
+}
+
+.homeLink:visited{
+    color: rgb(138, 179, 183);
+}
+
+.textPage{
+    text-align: left;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bcircle{
+    height: 2000px;
+    width: 2000px;
+    border-radius: 100%;
+    opacity: 0.05;
+    margin-top: -400px;
+    overflow-y: hidden;
+    position: fixed;
+    z-index: -10;
+}
+
+.smallListItem{
+    font-size: smaller;
+}
+
+.tinyList{
+    font-size: small;
+    color: lightgray;
+    padding: 10px;
+}
+
+.projFlex{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.projInnerFlex{
+    width: 500px;
+    background-color: rgba(160, 105, 218, 0.08);
+    transition: all 1s ease;
+    padding: 15px;
+    border-radius: 40px;
+    margin: 30px;
+    position: relative;
+}
+
+.projInnerFlex:hover{
+    background-color: #524768;
+    transform: scale(115%);
+    z-index: 10;
+    transform-origin: bottom;
+}
+
+.projPic{
+    opacity: 0.55;
+    transition: all 1s ease;
+    border-radius: 20%;
+    padding: 30px;
+    position: relative;
+}
+
+.projPic:hover{
+    opacity: 1;
+    border-radius: 45px;
+    transform: scale(115%);
+    transform-origin: bottom;
+    z-index: 1;
+}
+
+.experienceSection{
+    background-color: rgba(160, 105, 218, 0.08);
+    margin:50px;
+    padding: 20px;
+    border-radius: 40px;
+    transition: all 1s ease;
+    width: fit-content;
+    position: relative;
+}
+
+.experienceSection:hover{
+    background-color: #524768;
+    transform: scale(110%);
+    z-index: 10;
+}
+
+.skillsSection{
+    background-color: rgba(160, 105, 218, 0.08);
+    margin:50px;
+    padding: 20px;
+    border-radius: 40px;
+    transition: all 1s ease;
+    position: relative;
+}
+
+.skillsSection:hover{
+    background-color: #524768;
+    transform: scale(110%);
+    z-index: 10;
+}
+
+.hrText{
+    width: 90vw
+}
+
+
+/*Styling by ID*/
+
+/*INDEX.HTML*/
+
+#introBox{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color:aliceblue;
+    text-shadow: 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+#name{
+    font-size: 40px;
+    font-family: "Righteous", sans-serif;
+    margin-bottom: 0;
+}
+
+#circ1{
+    border: 250px solid black;
+}
+
+#circ2{
+    border: 400px solid black;
+}
+
+#circ3{
+    border: 550px solid black;
+}
+
+#circ4{
+    border: 220px solid black;
+}
+
+#name2{
+    font-size: xx-large;
+    margin: 5px;
+    color:aliceblue;
+    font-weight: bold;
+    text-shadow: 2px 3px rgba(0,0,0,0.5);
+}
+
+#description{
+    font-size: larger;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+#description2{
+    margin: 5px;
+    font-weight: bold;
+    text-shadow: 1px 2px rgba(0,0,0,0.5);
+    color:aliceblue;
+}
+
+#headerImage{
+    position: absolute;
+    height: 20px;
+    margin-left: 50px;
+    margin-top: 23px;
+}
+
+#innerFlex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#innerFlex1{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#footerQuote{
+    font-family: "Press Start 2P", sans-serif;
+    color: white;
+    text-shadow: 1px 3px rgba(0,0,0,0.5);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+#proj1pic{
+    height: auto;
+    max-height: 400px;
+    max-width: 500px;
+}
+
+#proj2pic{
+    height: auto;
+    max-height: 400px;
+    max-width: 85vw;
+}
+
+#photo{
+    height:180px;
+    position: absolute;
+    padding-left: 20px;
+    padding-top: 20px;
+    opacity: 1;
+    z-index: -10;
+    border-radius: 20%;
+}
+
+#thinLink{
+    display:none;
+}
+
+/*Media Queries*/
+
+@media (max-width:600px){
+    .headerBoxRight{
+        display: none;
+    }
+    #thinLink{
+        display:contents;
+    }
+
+}
+
+@media (max-width:800px){
+    .growBox{
+        display: none;
+    }
+    .thinBox{
+        display: flex;
+        width: 100%; /* Full width */
+        height: 900px; /* Arbitrary height for visibility */
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: -300px;
+    }
+    #photo{
+        opacity: 0.15;
+        border-radius: 100%;
+    }
+}

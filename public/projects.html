@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Justin Ciocoi Projects</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a class="homeLink" href="index.html">Back to Home</a>
+    <div class="headerBoxRight">
+        <img id="headerImage" src="Images/laptop.png">
+       <p class="headerBoxText">New York, NY</p>
+       <p class="headerBoxText">
+        <a href="mailto:justinciocoi@gmail.com">E-Mail</a>
+       </p>
+    </div>
+    <div id="introBox2">
+        <p id="name2">Justin Ciocoi</p>
+        <p id="description2">
+            Full-Stack Software and Web Development</p>
+        <p id="description2">Data Science</p>
+        <p id="description2">Cybersecurity</p>
+    </div>
+    <br>
+    <hr>
+
+    <div class="bcircle" id="circ1"></div>
+    <div class="bcircle" id="circ2"></div>
+    <div class="bcircle" id="circ3"></div>
+    <div class="bcircle" id="circ4"></div>
+
+    <div class="textPage">
+        <h2>Password Vault Tool</h2>
+        <div class="projFlex">
+            <div class="projInnerFlex">
+                <h3>Project Description</h3>
+                <ul>
+                    <li>This project uses an automated BASH/ZSH script to store passwords in a vault directory on a home server with a pre-existing SSH connection to said home server</li>
+                    <li>The rationale for building this tool comes from a variety of sources
+                        <ul class="tinyList">
+                            <li>The growth in value of digital assets possessed by most people and protected using passwords</li>
+                            <li>The need for more complex passwords and the increased reliance on third party password managers</li>
+                            <li>The potential for third party password manager data loss</li>
+                        </ul>
+                    </li>
+                    <li>This tool exists as a <i>backup</i> to traditional password managers rather than an alternative, as its capabilities are fairly limited</li>
+                    <li>Since this tool simply encrypts whatever information is sent over the SSH connection, any text file containing sensitive information can be encrypted and saved in the vault as a backup</li>
+                    <li>The project files for this project can be found <a target="_blank" href="https://github.com/justinciocoi/passwordVault">here</a> </li>
+                    <li>This tool has been fully tested on MacOS Sonoma (Intel and Apple based), Debian Linux, and Arch Linux ARM</li>
+                    <li>This tool has also been lightly tested on a Windows machine using WSL, but some behavior was buggy, and will be fixed in the future</li>
+                </ul>
+            </div>
+            <div class="projInnerFlex">
+                <h3>Underlying Software/Tools/Protocols</h3>
+                <ul>
+                    <li>BASH/ZSH Scripting
+                        <ul class="tinyList">
+                            <li>This tool uses two shell scripts, one for encryption, and one for decryption</li>
+                            <li>These scripts are comptible with either BASH or ZSH</li>
+                            <li>Prints instructions to the command line for user interaction</li>
+                        </ul>
+                    </li>
+                    <li>OpenSSL
+                        <ul class="tinyList">
+                            <li>This tool uses OpenSSL in case of the user needing a newly generated AES Key</li>
+                            <li>An AES key of default length is generated using the OpenSSL library</li>
+                            <li>I chose to use the ECDSA algorithm for key generation due to its quantum resistant properties</li>
+                        </ul>
+                    </li>
+                    <li>SSH
+                        <ul class="tinyList">
+                            <li>SSH is the main networking protocol used in this tool</li>
+                            <li>SSH is used as a secure communication link over which your encrypted data will be sent</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="projInnerFlexI">
+                <img class="projPic" id="proj1pic" src=Images/code.png>
+            </div>
+        </div>
+        <hr class="hrText">
+        <br>
+        <h2>Web-Video Formatter and Downloader</h2>
+        <div class="projFlex">
+            <div class="projInnerFlex">
+                <h3>Project Description</h3>
+                <ul>
+                    <li>This tool uses a GUI to allow users to download publicly accessible content from YouTube in a variety of formats
+                        <ul class="tinyList">
+                            <li>Currently, .mp3, .mp4, and .avi file types are supported, but more will be added</li>
+                        </ul>
+                    </li>
+                    <li>Many online tools like this exist, but with data security becoming more and more important, being able to run this tool locally and view the source code is highly valuable</li>
+                    <li>While these tools are already easily accessible using terminal commands, this GUI was made both for ease of use and for less technical users</li>
+                    <li>Users can simply paste a link, specify a format using the drop-down menu, select a destination directory, and download the content</li>
+                    <li>The project files for this project can be found <a target="_blank" href="https://github.com/justinciocoi/yt_formatter">here</a> </li>
+                    <li>This tool has been fully tested on MacOS Sonoma (Both Intel and Apple based Silicon)</li>
+                </ul>
+            </div>
+            <div class="projInnerFlex">
+                <h3>Underlying Software/Tools/Protocols</h3>
+                <ul>
+                    <li>Python
+                        <ul class="tinyList">
+                            <li>Python is used for the GUI</li>
+                            <li>The tkinter library was used to generate and manage GUI elements</li>
+                            <li>The os library was used for file management purposes</li>
+                        </ul>
+                    </li>
+                    <li>BASH/ZSH 
+                        <ul class="tinyList">
+                            <li>Shell scripting is used to automate the backend interactions between command line tools like yt-dlp</li>
+                            <li>Our python GUI will pass user selected inputs to the shellcode, which will execute the requested instructions</li>
+                        </ul>
+                    </li>
+                    <li>yt-dlp
+                        <ul class="tinyList">
+                            <li>yt-dlp is a third party command line tool which gives an API that can directly download YouTube videos to your local system</li>
+                            <li>yt-dlp allows for a few different file formats on its own</li>
+                        </ul>
+                    </li>
+                    <li>ffmpeg
+                        <ul class="tinyList">
+                            <li>yt-dlp offers a fairly limited number of formats, but through ffmpeg, we can convert the file after yt-dlp has downloaded it</li>
+                            <li>This does introduce a significant performance penalty, however this tool is intended for use with videos < 10 minutes, which complete downloading and conversion fairly quickly given a stable internet connection and capable CPU</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="projInnerFlexI">
+                <img class="projPic" id="proj2pic" src=Images/ytformat.png>
+            </div>
+        </div>
+        <hr class="hrText">
+        <br>
+        <h2>New York Knicks Data Project</h2>
+        <div class="projFlex">
+            <div class="projInnerFlex">
+                <h3>Project Description</h3>
+                <ul>
+                    <li>This project is a web-based site that hosts a data project surrounding the 2023-2024 New York Knicks</li>
+                    <li>As a big fan of the team, I wanted to do a project that combined a personal interest with a professional one</li>
+                    <li>My initial intentions were to learn web development backends using node.js</li>
+                    <li>However, as I spent more time looking at SQL data, I came to a few hypotheses that I wanted to check
+                        <ul class="tinyList">
+                            <li>There are some statistical analyses done within the scope of this project</li>
+                            <li>These analyses are described and explained in further detail on the site</li>
+                            <li>Findings are also detailed on the site, however these largely amount to observations of correlation</li>
+                        </ul>
+                    </li>
+                    <li>This project was done over the course of a few weeks after the end of the NBA season</li>
+                    <li>This site has been fully tested on Chromium browsers and lightly tested on webkit browsers</li>
+                    <li>You can find the project site <a target="_blank" href="https://two023-24-new-york-knicks-data-project.onrender.com/">here</a> 
+                        <ul class="tinyList">
+                            <li>This is being hosted using Render's free instance type, so initially loading the site may take up to a minute if it has not been accessed within the last hour</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="projInnerFlex">
+                <h3>Underlying Software/Tools/Protocols</h3>
+                <ul>
+                    <li>HTML/CSS/JavaScript
+                        <ul class="tinyList">
+                            <li>This site was built using HTML, CSS, and JavaScript</li>
+                            <li>Certain third party libraries were used, especially on the backend</li>
+                            <li>The vast majority of the website design was done from scratch</li>
+                            <li>JavaScript was used largely in order to interact with the mySQL database on the backend</li>
+                        </ul>
+                    </li>
+                    <li>Node.js
+                        <ul class="tinyList">
+                            <li>Node.js was the backend that was used on this project</li>
+                            <li>Node modules express and mysql2 were used for web-server capabilities and mySQL database access</li>
+                        </ul>
+                    </li>
+                    <li>mySQL
+                        <ul class="tinyList">
+                            <li>The database used is a mySQL database</li>
+                            <li>Originally a local database, I moved this database to an online hosting service such that is now accessible over the web</li>
+                            <li>SQL statements are used not only in data collection on the site backend, but were also used to define and create the schema structure</li>
+                            <li>mySQL workbench was also used for imports of larger data quantities</li>
+                        </ul>
+                    </li>
+                    <li>Web Hosting Details
+                        <ul class="tinyList">
+                            <li>The project files are hosted at the project's <a target="_blank" href="https://github.com/justinciocoi/2023-24-New-York-Knicks-Data-Project">github page</a></li>
+                            <li><a target="_blank" href="https://render.com">Render</a> is providing web hosting capabilities for the site itself</li>
+                            <li>the mySQL database is hosted <a target="_blank" href="https://freemysqlhosting.net">here</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="projInnerFlexI">
+                <img class="projPic" id="proj1pic" src="Images/knicks1.jpg">
+            </div>
+            <div class="projInnerFlexI">
+                <img class="projPic" id="proj1pic" src="Images/knicks2.jpg">
+            </div>
+            <div class="projInnerFlexI">
+                <img class="projPic" id="proj1pic" src="Images/knicks3.jpg">
+            </div>
+        </div>
+        <hr class="hrText">
+        <br>
+        <h2>Apple Watch Haptic Metronome</h2>
+        <div class="projFlex">
+            <div class="projInnerFlex">
+                <h3>Project Description</h3>
+                <ul>
+                    <li>This is an Apple Watch application that serves as a metronome using haptic feedback rather than audible clicks</li>
+                    <li>The thinking behind this is to provide a way for musicians to silently keep time in a way that does not interfere with the music itself</li>
+                    <li>The application has a fairly limited set of features, which include
+                        <ul class="tinyList">
+                            <li>Variable BPM from 30 to 240</li>
+                            <li>Quick-changing the BPM by + or - 5</li>
+                            <li>Manually entering BPM value</li>
+                            <li>Background operation of metronome</li>
+                        </ul>
+                    </li>
+                    <li>This metronome exists as a personal project, so it will not be listed on the App Store, but the git repository <a target="_blank" href="https://github.com/justinciocoi/Apple-Watch-Haptic-Metronome">here</a> 
+                        contains all of the source code necessry to recreate this app on your own device
+                    </li>
+                </ul>
+            </div>
+            <div class="projInnerFlex">
+                <h3>Underlying Software/Tools/Protocols</h3>
+                <ul>
+                    <li>Swift
+                        <ul class="tinyList">
+                            <li>This app was coded entirely in Swift</li>
+                            <li>The SwiftUI library was used for UI/UX design</li>
+                            <li>Swift classes were implemented to allow for background operation</li>
+                        </ul>
+                    </li>
+                    <li>Xcode
+                        <ul class="tinyList">
+                            <li>Despite my usual IDE being VSCode, this project was developed in Xcode</li>
+                            <li>Through this I familiarized myself with various Xcode tools
+                                <ul class="tinyList">
+                                    <li>Xcode Command Line Utilities</li>
+                                    <li>Deploying Apps in Device Simulator and Remote Devices</li>
+                                    <li>Xcode Debugging tools</li>
+                                </ul>
+                            </li>
+                            <li></li>
+                        </ul>
+                    </li>
+                    <li>WatchKit
+                        <ul class="tinyList">
+                            <li>This app uses the WatchKit Framework to effectively execute its intended functions</li>
+                            <li>The WKInterfaceDevice() method is used to access the Watch's haptic engine</li>
+                            <li>Other WatchKit methods were used in the scheduling of the metronome in the background, including
+                                <ul class="tinyList">
+                                    <li>WKExtension()</li>
+                                    <li>WKExtensionDelegate()</li>
+                                    <li>WKRefreshBackgroundTasks()</li>
+                                    <li>WKApplicationRefreshBackgroundTasks()</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li> 
+                </ul>
+            </div>
+            <div class="projInnerFlexI">
+                <img class="projPic" id="proj1pic" src="Images/watch1.png">
+            </div>
+            <div class="projInnerFlexI">
+                <img class="projPic" id="proj1pic" src="Images/watch2.png">
+            </div>
+            <div class="projInnerFlexI">
+                <img class="projPic" id="proj1pic" src="Images/watch3.png">
+            </div>
+        </div>
+        <br>
+        <!--
+         <h2>Video Game</h2>
+        <div class="projFlex">
+            <div class="projInnerFlex">
+                <h3>Project Description</h3>
+                
+            </div>
+            <div class="projInnerFlex">
+                <h3>Underlying Software/Tools/Protocols</h3>
+                
+            </div>
+            <div class="projInnerFleI">
+                <img id="proj1pic" src="ERROR">
+            </div>
+        </div>
+        -->
+    </div>
+    <br>
+    <hr>
+    <p id="footerQuote">"Simplicity, carried to the extreme, becomes elegance." -Jon Franklin</p>
+    <br>
+    <br>
+    <hr>
+    <a href="index.html">Back to Home</a>
+    <br>
+    <script src="Function/mouseFollow.js"></script>
+</body>
+</html>
