@@ -2,10 +2,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     var cipherText = document.getElementById('name');
     
-    const characters = [..."/CJIUOSCTOIIN01@$#&"];
-    const solveMilliseconds = 800;
+    const characters = [..."/@$#&*%^()!?{}[]-+=_|~"];
+    const solveMilliseconds = 500;
     const characterSelectionMilliseconds = 40;
-    const delayMilliseconds = 500;
+    const delayMilliseconds = 200;
 
     const randomArrayElement = (arr) => {
         return arr[(arr.length * Math.random()) | 0];
