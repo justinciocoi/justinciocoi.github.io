@@ -131,6 +131,7 @@ red{
     font-size: 40px;
     box-shadow: 5px 10px rgba(0,0,0,0.5);
     transition: all 1.5s ease;
+    scrollbar-width: none;
 }
 
 .growBox .moveText{
