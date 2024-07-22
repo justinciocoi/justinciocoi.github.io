@@ -301,7 +301,7 @@ red{
 
 .projInnerFlex:hover{
     background-color: #524768;
-    transform: scale(115%);
+    transform: scale(105%);
     z-index: 10;
     transform-origin: bottom;
 }
@@ -355,6 +355,10 @@ red{
 
 .hrText{
     width: 90vw
+}
+
+.hr2{
+    width:60vw;
 }
 
 /* Tooltip container */
@@ -528,4 +532,31 @@ red{
         opacity: 0.15;
         border-radius: 100%;
     }
+}
+
+/* Project Title */
+.projectTitle {
+    cursor: pointer;
+    padding: 10px;
+    background-color: rgba(160, 105, 218, 0.15);
+    border-radius: 10px;
+    margin: 10px 0;
+    transition: all 1s ease;
+}
+
+.projectTitle:hover{
+    background-color: rgba(160, 105, 218, 0.35);
+    transform: scale(110%);
+}
+
+.projectContent {
+    display: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: all 2s ease;
+}
+
+.projectContent.open {
+    display: block;
+    max-height: fit-content;
 }
