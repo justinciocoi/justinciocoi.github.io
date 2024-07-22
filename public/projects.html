@@ -188,7 +188,7 @@
                         <ul class="tinyList">
                             <li>The project files are hosted at the project's <a target="_blank" href="https://github.com/justinciocoi/2023-24-New-York-Knicks-Data-Project">github page</a></li>
                             <li><a target="_blank" href="https://render.com">Render</a> is providing web hosting capabilities for the site itself</li>
-                            <li>the mySQL database is hosted <a target="_blank" href="https://freemysqlhosting.net">here</a></li>
+                            <li>the mySQL database is hosted <a target="_blank" href="https://aws.com">here</a>, using an AWS RDS instance</li>
                         </ul>
                     </li>
                 </ul>
@@ -272,6 +272,68 @@
             </div>
             <div class="projInnerFlexI">
                 <img class="projPic" id="proj1pic" src="Images/watch3.png">
+            </div>
+        </div>
+        <hr class="hrText">
+        <br>
+        <h2>Simple Dashboard</h2>
+        <div class="projFlex">
+            <div class="projInnerFlex">
+                <h3>Project Description</h3>
+                <ul>
+                    <li>This is a simple web dashboard that I created for myself and personalized to my location</li>
+                    <li>I created it to give me weather data, news I am interested in, as well as some other information</li>
+                    <li>I wanted to create a personalized home page for use on my mobile device browsers, and also wanted to better learn practical API usage</li>
+                </ul>
+            </div>
+            <div class="projInnerFlex">
+                <h3>Underlying Software/Tools/Protocols</h3>
+                <ul>
+                    <li>API Integration
+                        <ul class="tinyList">
+                            <li>Weather integration
+                                <ul class="tinyList">
+                                    <li>Used OpenWeatherMap Weather API to collect forecast data</li>
+                                    <li>Forecast data is provided every 12 hours for the next 3 days</li>
+                                    <li>Temperature is given as a number in Farenheit and conditions are returned using an icon set</li>
+                                    <li><a target="_blank" href="https://openweathermap.org">Link here</a></li>
+                                </ul>
+                            </li>
+                            <li>News integration
+                                <ul class="tinyList">
+                                    <li>Used NewsData.io News API to collect news data</li>
+                                    <li>News Article titles, sources, links, and images are provided on the dashboard</li>
+                                    <li><a target="_blank" href="https://newsdata.io">Link here</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Node.js
+                        <ul class="tinyList">
+                            <li>Once again, this is a node app which uses the express module</li>
+                            <li>Node is also used for database interaction and fetchhing API data</li>
+                        </ul>
+                    </li>
+                    <li>mySQL/JS
+                        <ul class="tinyList">
+                            <li>I used an AWS RDS instance to create a database which I populated with various quotes</li>
+                            <li>Then, I used JavaScript to randomly select an integer within the size of the quote database and display the quote with corresponding ID</li>
+                            <li>JavaScript was also used for fetching and inserting other API data into the dashboard</li>
+                        </ul>
+                    </li>
+                    <li>Environment Variables
+                        <ul class="tinyList">
+                            <li>Environment variables were used to protect the integrity of sensitive data used in this project</li>
+                            <li>API keys, as well as all data corresponding to my AWS database, has been hidden using environment variables</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="projInnerFlexI">
+                <img class="projPic" id="proj1pic" src="Images/dash1.jpg">
+            </div>
+            <div class="projInnerFlexI">
+                <img class="projPic" id="proj1pic" src="Images/dash2.jpg">
             </div>
         </div>
         <br>

@@ -433,6 +433,14 @@ red{
     margin-bottom: 0;
 }
 
+#description2{
+    font-weight: bold;
+    font-family: "Righteous";
+    margin-left: 10px;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
 
 #headerImage{
     position: absolute;
