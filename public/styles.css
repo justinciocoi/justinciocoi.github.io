@@ -142,6 +142,7 @@ red{
 
 .growBox:hover{
     height:fit-content;
+    min-height: 200px;
     max-height: 800px;
     width: 100vw;
     box-shadow: 0px 5px rgba(0,0,0,0.5);
@@ -510,7 +511,8 @@ red{
         display: none;
     }
     #thinLink{
-        display:contents;
+        display:block;
+        margin-top: 10px;
     }
 
 }
@@ -529,7 +531,7 @@ red{
         margin-top: -300px;
     }
     #photo{
-        opacity: 0.15;
+        opacity: 0.0;
         border-radius: 100%;
     }
 }
@@ -538,14 +540,14 @@ red{
 .projectTitle {
     cursor: pointer;
     padding: 10px;
-    background-color: rgba(160, 105, 218, 0.15);
+    background-color: rgba(105, 116, 218, 0.15);
     border-radius: 10px;
     margin: 10px 0;
     transition: all 1s ease;
 }
 
 .projectTitle:hover{
-    background-color: rgba(160, 105, 218, 0.35);
+    background-color: rgba(105, 111, 218, 0.35);
     transform: scale(110%);
 }
 
