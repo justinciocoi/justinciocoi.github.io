@@ -110,7 +110,7 @@ red{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 60vh;
+    height: 40vh;
     margin: 0;
 }
 
@@ -561,4 +561,12 @@ red{
 .projectContent.open {
     display: block;
     max-height: fit-content;
+}
+
+#introBlurb {
+    text-align: center;
+    color: white;
+    width: 40vw;
+    margin: 0 auto;
+    font-family: "Righteous";
 }
