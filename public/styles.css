@@ -172,7 +172,6 @@ red{
 
 .thinBox{
     display: none;
-    transform: translateY(-200px);
 }
 
 .thingrowBox{
@@ -192,6 +191,7 @@ red{
     font-size: 40px;
     box-shadow: 5px 10px rgba(0,0,0,0.5);
     transition: all 1s ease;
+    transform-origin: bottom;
 }
 
 
@@ -552,15 +552,14 @@ red{
 }
 
 .projectContent {
-    display: none;
     overflow: hidden;
     max-height: 0;
-    transition: all 2s ease;
+    transition: max-height 1s ease-out;
 }
 
 .projectContent.open {
     display: block;
-    max-height: fit-content;
+    max-height: 2000px;
 }
 
 #introBlurb {
