@@ -11,13 +11,13 @@ function pauseTimer() {
         // Pause the timer
         isTimerPaused = true;
         clearInterval(countdown); // Stop the countdown
-        image.src = 'images/play.png';
+        image.src = 'images/Play.png';
         image.style.transform = 'translateY(1px) translateX(4px)';
     } else if (isTimer && isTimerPaused) {
         // Resume the timer
         isTimerPaused = false;
         startCountdown(); // Start the countdown again with remaining time
-        image.src = 'images/pause.png';
+        image.src = 'images/Pause.png';
         image.style.transform = 'translateY(2px)';
     }
 }
@@ -52,7 +52,7 @@ function startTimer() {
         document.getElementById('circle2').style.display = 'none';
 
         const image = document.getElementById('playPauseImage');
-        image.src = 'images/pause.png';
+        image.src = 'images/Pause.png';
         image.style.transform = 'translateY(3px)';
 
         isTimer = false;
