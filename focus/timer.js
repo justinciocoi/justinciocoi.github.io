@@ -1,3 +1,4 @@
+
 let countdown;
 let isTimer = false;
 let isFocusPhase = true; // Track if it's the focus or rest period
