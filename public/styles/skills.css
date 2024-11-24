@@ -1,0 +1,113 @@
+.skillImg {
+    height: 40px;
+    width: 40px;
+    transition: all 0.3s;
+    transform-origin: bottom;
+}
+
+.skillContainer {
+    flex-shrink: 0; /* Prevent containers from shrinking */
+    width: 120px; /* Fixed width for each skill container */
+    text-align: center;
+    opacity: 0; /* Start invisible */
+    animation: slideIn 18s linear infinite; /* Apply animation */
+    position: absolute;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.skillLabel {
+    font-weight: 600;
+    font-variant: small-caps;
+    text-align: center;
+}
+
+#skillsFlex {
+    max-width: 80vw;
+    
+    position: relative;
+    width: 100%;
+    justify-content: start;    
+    height: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-10vw); /* Start off-screen left */
+        opacity: 0; /* Invisible */
+    }
+    10% {
+        opacity: 1; /* Fade in */
+    }
+    50% {
+        transform: translateX(55vw); /* Fully in position */
+        opacity: 1; /* Fully visible */
+    }
+    65% {
+        opacity: 0
+    }
+    80% {
+        transform: translateX(100vw); /* Move off-screen to the right */
+        opacity:0
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.skillContainer:nth-child(1) {
+    animation-delay: -10s;
+}
+
+.skillContainer:nth-child(2) {
+    animation-delay: -8.5s;
+}
+
+.skillContainer:nth-child(3) {
+    animation-delay: -7s;
+}
+
+.skillContainer:nth-child(4) {
+    animation-delay: -5.5s;
+}
+
+.skillContainer:nth-child(5) {
+    animation-delay: -4s;
+}
+
+.skillContainer:nth-child(6) {
+    animation-delay: -2.5s;
+}
+
+.skillContainer:nth-child(7) {
+    animation-delay: -1s;
+}
+
+.skillContainer:nth-child(8) {
+    animation-delay: 0.5s;
+}
+
+.skillContainer:nth-child(9) {
+    animation-delay: 2s;
+}
+
+.skillContainer:nth-child(10) {
+    animation-delay: 3.5s;
+}
+
+.skillContainer:nth-child(11) {
+    animation-delay: 5s;
+}
+
+.skillContainer:nth-child(12) {
+    animation-delay: 6.5s;
+}
+
+.skillContainer:nth-child(13) {
+    animation-delay: 8s;
+}

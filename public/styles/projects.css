@@ -1,0 +1,103 @@
+.projTitle {
+    text-align: center;
+    margin: 10px;
+    margin-top: px;
+    margin-bottom: 40px;
+    font-size: 18pt;
+}
+
+#projectFlex {
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+#projBox {
+    border:#00d2f7 2px solid;
+    height: fit-content;
+    margin-top: 50px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+#projectSection {
+    height: fit-content;
+    width: 80vw;
+    margin-left: 10vw;
+}
+
+.projectImage {
+    height: 300px;
+    width: 35vw;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projectDescription {
+    height: fit-content;
+    width: 35vw;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.projImage {
+    height: 300px;
+    opacity: 0.3;
+    margin: none;
+    transition: all 1s ease;
+    border-radius: 20px; 
+}
+
+.projImage:hover {
+    opacity: 1;
+    z-index: 3;
+    transform: scale(105%);
+    transform-origin: center;
+}
+
+.projLinkImg {
+    width: 100px;
+    transition: all 1s;
+    z-index: 20;
+}
+
+.projLinkImg:hover {
+    transform: scale(130%);
+}
+
+
+
+.description {
+    margin-bottom: 30px;
+}
+
+.projTechImg {
+    width: 50px;
+    height: 50px;
+}
+
+.techLinkImageContainer {  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.techImageContainer{
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.65s ease;
+    margin: 20px;
+    
+}
+.techImageContainer:hover {
+    transform: translateY(-10px) scale(125%);
+}

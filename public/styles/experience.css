@@ -1,0 +1,102 @@
+#experienceFlex {
+    margin: 20px;
+    align-items: center;
+}
+
+.experienceBox {
+    border: rgb(0,210,247) 2px  solid;
+    height: fit-content;
+    border-radius: 50px;
+    width: 450px;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.experienceImage {
+    
+    
+    margin: 10px;
+}
+
+.experienceLogo {
+    height: 100px;
+    transition: all 1s;
+}
+
+.experienceLogo:hover {
+    transform: scale(110%);
+}
+
+.experienceImg {
+    height: 50px;
+
+}
+
+.experienceLocation {
+    font-size: 16pt;
+    height: fit-content;
+    width: 100px;
+    margin: 10px;
+    text-align: center;
+}
+
+.experienceDescription {
+    text-align: right;
+    height: fit-content;
+    padding: 10px;
+    width: 300px;
+}
+
+.experienceLeftFlexBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#resumeLabel {
+    margin: 0;
+    color: rgb(0,210,247);
+    text-decoration: none;
+    transition: all 1s;
+    transform-origin: right;
+}
+
+#resumeImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.titleHFlex:hover #resumeImage {
+    transform: scale(150%);
+}
+
+.titleHFlex:hover #resumeLabel {
+    transform: scaleX(100%);
+}
+
+#resumeFlex {
+    transition: all 0.6s;
+    border: rgb(0,210,247) 6px outset;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.resumeButton:hover #resumeFlex {
+    transform: scale(130%);
+}
+
+.experienceLabel {
+    font-size: 18pt;
+}
+
+.specialHR {
+    border: rgb(0,210,247) 1px solid;
+    margin: 0;
+}

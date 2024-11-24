@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+body {
+    background-color: rgb(0, 0, 5);
+    color: #00d2f7;
+    font-family: 'Source Code Pro';
+    overflow-x: hidden;
+}
+
+hr {
+    width: 80vw;
+    color:#00d2f7;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-position: inside;
+    transform: translateX(-10px);
+    padding: 10px;
+    z-index: -10;
+}
+
+li {
+    padding: 5px;
+    font-size: 10pt;
+}
+
+.smallhr {
+    width: 60vw;
+}
+
+.titleLabel{
+    text-align: center;
+    font-size: 30pt;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.smallLabel {
+    text-align: center;
+    font-size: 14pt;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: column;    
+}
+
+.hFlexBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.titleHFlex {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    transition: all 0.5;
+}
+
+.imageContainer{
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.65s ease;
+}
+
+.imageContainer:hover {    
+    transform: translateY(-10px) scale(125%);
+}
+
+.linkImg {
+    width: 30px;
+    height: 30px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerQuote {
+    margin-left: 10vw;
+    margin-bottom: 25px;
+}
+
+.footerLogo {
+    margin-right: 10vw;
+    margin-bottom: 25px;
+
+}
+
+#footerLogo {
+    height: 40px;
+    transition: all 7s;
+}
+
+#footerLogo:hover {
+    transform: rotate(3600deg);
+}
+
+#links {
+    background-color: rgba(0,0,10, 0.5);
+    backdrop-filter: blur(8px);
+    width: 80vw;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%) translateY(-10px);
+    z-index: 1000;
+    border-end-end-radius: 30px;
+    border-end-start-radius: 30px;
+    border: #00d2f7 2px solid;
+}
+
+.pageUnderConstruction {
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeButton {
+    height: 65px;
+    width: 65px;
+    border: #ebebeb 6px outset;
+    position: fixed;
+    transform: translateY(50vh) translateX(3vw);
+    border-radius: 100%;
+    background-color: #cecece;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.homeButton:hover{
+    transform: translateY(50vh) translateX(3vw) scale(125%);
+    transform-origin: bottom left;
+    background-color: #00d2f7;
+    
+}
+
+.homeImage {
+    height: 40px;
+    width: 40px;
+}
+
