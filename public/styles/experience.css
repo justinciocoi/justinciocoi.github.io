@@ -7,7 +7,7 @@
     border: rgb(0,210,247) 2px  solid;
     height: fit-content;
     border-radius: 50px;
-
+    background-color: rgb(0,0,10);
     margin: 20px;
     padding: 20px;
     display: flex;
@@ -90,6 +90,7 @@
     padding: 30px;
     border-radius: 30px;
     transform-origin: top;
+    background-color: rgb(0,0,10);
 }
 
 .resumeButton:hover #resumeFlex {

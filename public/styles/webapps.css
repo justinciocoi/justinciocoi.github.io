@@ -1,6 +1,4 @@
-#webAppSection {
 
-}
 
 #webAppFlex {
     justify-content: center;
@@ -16,6 +14,7 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    background-color: rgb(0,0,10);
 }
 
 .webAppImg {
