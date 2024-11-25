@@ -90,3 +90,32 @@ document.addEventListener('DOMContentLoaded', function() {
         return `${str.substring(0, index)}${chr}${str.substring(index + 1)}`;
     }
 })
+
+
+const skillsFlex = document.getElementById('skillsFlex');
+const skillContainers = document.querySelectorAll('.skillContainer');
+
+// Pause animations on hover over skillsFlex
+
+
+
+
+// Scroll-based control for animations
+skillsFlex.addEventListener('scroll', () => {
+    const maxScroll = skillsFlex.scrollWidth - skillsFlex.clientWidth;
+    const scrollPercentage = skillsFlex.scrollRight / maxScroll;
+
+    // Adjust animation progress dynamically based on scroll
+    let x = 1.5;
+    skillContainers.forEach((skill) => {
+        const animationDuration = 18; // Duration matches CSS animation
+        const animationProgress = ((scrollPercentage * animationDuration)/10 + x) % 100;
+
+        skill.style.animationPlayState = 'paused'; // Pause animation to adjust progress
+        skill.style.animationDelay = `-${animationProgress}s`; // Set progress dynamically
+        x += 1.5;
+    });
+    skillContainers.forEach(skill => skill.style.animationPlayState = 'running');
+});
+
+

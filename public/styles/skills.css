@@ -25,15 +25,24 @@
 
 #skillsFlex {
     max-width: 80vw;
-    
+    overflow-x: hidden;
+    white-space: nowrap;
+    display: flex;
+    justify-content: start;
+    scroll-behavior: smooth;
     position: relative;
     width: 100%;
     justify-content: start;    
     height: 80px;
     left: 50%;
     transform: translateX(-50%);
+    scrollbar-width: none;
+    scrollbar-color: rgba(0,0,0,0);
 }
 
+#skillsFlex::-webkit-scrollbar {
+    display: none;
+}
 
 @keyframes slideIn {
     0% {
@@ -47,12 +56,8 @@
         transform: translateX(55vw); /* Fully in position */
         opacity: 1; /* Fully visible */
     }
-    65% {
-        opacity: 0
-    }
     80% {
         transform: translateX(100vw); /* Move off-screen to the right */
-        opacity:0
     }
     100% {
         opacity: 0;
