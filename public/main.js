@@ -28,6 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
     var cipherText2 = document.getElementById('label1');
     var cipherText3 = document.getElementById('label2');
     var cipherText4 = document.getElementById('label3');
+
+    drawPolarFunction(tanPolarFunction,  (window.scrollY / 800) + 2, ctx, { strokeStyle: 'rgb(0, 210, 247)', lineWidth: 15});
+    drawPolarFunction(sinPolarFunction,  (window.scrollY / 800) + 2, ctx, { strokeStyle: 'rgb(0, 210, 247))', lineWidth: 25});
     
     const characters = [..."~`!@#$%^&*_+=<>;:'[]{}()/?|1234567890"];
     
@@ -119,3 +122,71 @@ skillsFlex.addEventListener('scroll', () => {
 });
 
 
+
+const canvas = document.getElementById('backgroundCanvas');
+const ctx = canvas.getContext('2d');
+
+const height = canvas.height;
+const width = canvas.width;
+
+const centerY = height/2;
+const centerX = width/2;
+
+
+// Convert polar coordinates (r, theta) to Cartesian (x, y)
+function polarToCartesian(centerX, centerY, r, theta) {
+    return {
+        x: centerX + r * Math.cos(theta),
+        y: centerY - r * Math.sin(theta)
+    };
+}
+
+// Draw the polar function (with customizable stroke styles)
+function drawPolarFunction(polarFunc, n, ctx, options = {}, thetaStep = 0.01) {
+    const { strokeStyle = 'rgb(0, 210, 247)', lineWidth = 2} = options;
+
+    ctx.beginPath();
+    for (let theta = 0; theta <= 2 * Math.PI; theta += thetaStep) {
+        const r = polarFunc(theta, n);
+        if (!isFinite(r)) continue; // Skip discontinuities in the function
+        const { x, y } = polarToCartesian(centerX, centerY, r * 400, theta);
+
+        if (theta === 0) {
+            ctx.moveTo(x, y);
+        } else {
+            ctx.lineTo(x, y);
+        }
+    }
+    ctx.closePath();
+    ctx.strokeStyle = strokeStyle;
+    ctx.lineWidth = lineWidth;
+    ctx.stroke();
+}
+
+// Polar functions
+function tanPolarFunction(theta, n) {
+    return Math.tan(n * theta);
+}
+
+function sinPolarFunction(theta, n) {
+    return 2*Math.sin (n);
+}
+
+// Update both graphs on scroll
+window.addEventListener('scroll', () => {
+    const n = (window.scrollY / 800) + 2;
+
+    // Clear the canvas before redrawing
+    ctx.clearRect(0, 0, width, height);
+
+    // Draw both graphs with different styles
+    drawPolarFunction(tanPolarFunction, n, ctx, { strokeStyle: 'rgb(0, 210, 247)', lineWidth: 15});
+    drawPolarFunction(sinPolarFunction, n, ctx, { strokeStyle: 'rgb(0, 210, 247)', lineWidth: 25});
+});
+
+
+
+// Debug scroll position
+setInterval(() => {
+    console.log(window.scrollY);
+}, 1000);

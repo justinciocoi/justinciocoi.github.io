@@ -161,3 +161,9 @@ li {
     width: 40px;
 }
 
+#backgroundCanvas{
+    position: fixed;
+    z-index: -10;
+    opacity: 0.1;
+}
+

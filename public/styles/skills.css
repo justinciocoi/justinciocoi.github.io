@@ -25,7 +25,6 @@
 
 #skillsFlex {
     max-width: 80vw;
-    overflow-x: hidden;
     white-space: nowrap;
     display: flex;
     justify-content: start;
@@ -56,8 +55,12 @@
         transform: translateX(55vw); /* Fully in position */
         opacity: 1; /* Fully visible */
     }
+    68%{
+        opacity: 0
+    }
     80% {
         transform: translateX(100vw); /* Move off-screen to the right */
+        opacity: 0s;
     }
     100% {
         opacity: 0;

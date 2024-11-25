@@ -86,9 +86,10 @@
 
 #resumeFlex {
     transition: all 0.6s;
-    border: rgb(0,210,247) 6px outset;
+    border: rgb(0,210,247) 4px outset;
     padding: 30px;
     border-radius: 30px;
+    transform-origin: top;
 }
 
 .resumeButton:hover #resumeFlex {
