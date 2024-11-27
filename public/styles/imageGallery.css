@@ -1,0 +1,52 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+.galleryImage {
+    width:100%;
+}
+
+.galleryImage img {
+    width:  300px;
+    border-radius: 30px;
+    overflow: visible;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.galleryImageContainer {
+    display: flex;
+    transition: all 0.5s ease-in-out;
+    width: 100%;
+    align-items: center;
+}
+
+.galleryContainer {
+    width: 300px;
+    margin: 30px;
+    overflow: hidden;
+}
+
+
+
+.arrow {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: rgb(0,0,10);
+    color: rgb(0,210,247);
+    border: rgb(0,210,247) 2px solid;
+    transition: all 0.3s;
+}
+
+.arrow:hover {
+    background-color: rgb(0,210,247);
+    color: rgb(0,0,10);
+}

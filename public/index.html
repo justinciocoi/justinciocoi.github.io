@@ -9,14 +9,18 @@
     <link rel="stylesheet" href="styles/skills.css">
     <link rel="stylesheet" href="styles/experience.css">
     <link rel="stylesheet" href="styles/webapps.css">
+    <link rel="stylesheet" href="styles/imageGallery.css">
+
     <link rel="icon" href="img/icons/jcblue.png" type="image/x-icon">
 
 </head>
 <body>
-
+   
     <canvas id="backgroundCanvas" height="1000vh" width="2000vw">
 
     </canvas>
+
+   
     
     <div class="hFlexBox" id="links">
         <a title="GitHub Profile" href="https://github.com/justinciocoi" target="_blank">
@@ -143,7 +147,7 @@
                     </div>
                     <div class="experienceLocation">
                         <div class="experienceLogo">
-                            <a href="https://www.jjay.cuny.edu/" target="_blank">
+                            <a href="https://jjay.smartcatalogiq.com/en/2024-2025/undergraduate-bulletin/majors/computer-science-and-information-security-bachelor-of-science/" target="_blank">
                                 <img class="experienceLogo" src="img/companies/johnjayblue.png">
                             </a>
                         </div>
@@ -232,7 +236,7 @@
                     </div>
                     <div class="experienceLocation">
                         <div class="experienceLogo">
-                            <a href="https://nyu.edu" target="_blank">
+                            <a href="https://as.nyu.edu/research-centers/center-for-quantum-phenomena.html" target="_blank">
                                 <img class="experienceLogo" src="img/companies/nyublue.png">
                             </a>
                         </div>
@@ -261,19 +265,35 @@
     </div>
 
     <hr>
-    
+    <div class="titleLabel">
+        Projects
+    </div>
     <div id="projectSection" class="flexBox">
         <br>
-        <div class="titleLabel">
-            Projects
-        </div>
+        
         <!--DAI-LI-->
         <div class="flexBox" id="projBox">
             
             <div id="projectFlex" class="hFlexBox">
                 <div class="flexBox">
-                    <div class="projectImage">
-                        <img class="projImage" src="https://i.imgur.com/PH5MBsA.jpeg">
+                    <div class="galleryContainer">
+                        <div id="galleryWrapper" class="galleryImageContainer">
+                            <div class="galleryImage">
+                                <img class="mainPageImageGalleryImg" src="https://i.imgur.com/PH5MBsA.jpeg">
+                            </div>
+                            <div class="galleryImage">
+                                <img class="mainPageImageGalleryImg" src="https://i.imgur.com/iOHYYqO.jpeg">
+                            </div>
+                            <div class="galleryImage">
+                                <img class="mainPageImageGalleryImg" src="https://i.imgur.com/kW4gU5u.jpeg">
+                            </div>
+                            <div class="galleryImage">
+                                <img class="mainPageImageGalleryImg" src="https://i.imgur.com/mvnFG3h.jpeg">
+                            </div>
+                        </div>
+                        <button class="arrow left mainPage" onclick="slideGallery(-1)">&#8249;</button>
+
+                        <button class="arrow right mainPage" onclick="slideGallery(1)">&#8250;</button>
                     </div>
                     <div class="techLinkImageContainer">
                         <a href="https://github.com/justinciocoi/dai-li" target="_blank">
@@ -350,8 +370,20 @@
                     
                 </div>
                 <div class="flexBox">
-                    <div class="projectImage">
-                        <img class="projImage" src="https://i.imgur.com/8oOVDG4.jpeg">
+                    <div class="galleryContainer">
+                        <div id="galleryWrapper" class="galleryImageContainer">
+                            <div class="galleryImage">
+                                <img class="mainPageImageGalleryImg" src="https://i.imgur.com/Q1wtbfd.jpeg">
+                            </div>
+                            <div class="galleryImage">
+                                <img class="mainPageImageGalleryImg" src="https://i.imgur.com/EnZ4rQ9.jpeg">
+                            </div>
+                            <div class="galleryImage">
+                                <img class="mainPageImageGalleryImg" src="https://i.imgur.com/8oOVDG4.jpeg">
+                            </div>
+                        </div>
+                        <button class="arrow left mainPage" onclick="slideGallery(-1)">&#8249;</button>
+                        <button class="arrow right mainPage" onclick="slideGallery(1)">&#8250;</button>
                     </div>
                     <div class="techLinkImageContainer">
                         <a href="https://github.com/justinciocoi/2023-2024-New-York-Knicks-Data-Project" target="_blank">
@@ -368,8 +400,14 @@
             
             <div id="projectFlex" class="hFlexBox">
                 <div class="flexBox">
-                    <div class="projectImage">
-                        <img class="projImage" src="https://i.imgur.com/Fn2hhjE.png">
+                    <div class="galleryContainer">
+                        <div id="galleryWrapper" class="galleryImageContainer">
+                            <div class="galleryImage">
+                                <img class="mainPageImageGalleryImg" src="https://i.imgur.com/Fn2hhjE.png">
+                            </div>
+                        </div>
+                        <button class="arrow left mainPage" onclick="slideGallery(-1)">&#8249;</button>
+                        <button class="arrow right mainPage" onclick="slideGallery(1)">&#8250;</button>
                     </div>
                     <div class="techLinkImageContainer">
                         <a href="https://github.com/justinciocoi/passwordVault" target="_blank">
@@ -445,5 +483,7 @@
     </div>
 
     <script src="main.js"></script>
+    <script src="function/imageGallery.js"></script>
+
 </body>
 </html>

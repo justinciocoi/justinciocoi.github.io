@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/imageGallery.css">
+</head>
+<body>
+    <div class="galleryContainer">
+        <button class="arrow left" onclick="moveSlide(-1)">&#8249;</button>
+        <div class="galleryWrapper" id="galleryWrapper">
+            <div class="galleryImage">
+                <img src="img/logos/aesblue.png" alt="Image 1">
+            </div>
+            <div class="galleryImage">
+                <img src="img/logos/awsblue.png" alt="Image 2">
+            </div>
+            <div class="galleryImage">
+                <img src="img/logos/bashblue.png" alt="Image 3">
+            </div>
+        </div>
+        <button class="arrow right" onclick="moveSlide(1)">&#8250;</button>
+    </div>
+
+    <script src="function/imageGallery.js"></script>
+</body>
+</html>

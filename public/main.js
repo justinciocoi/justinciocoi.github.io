@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', function() {
     var cipherText3 = document.getElementById('label2');
     var cipherText4 = document.getElementById('label3');
 
-    drawPolarFunction(tanPolarFunction,  (window.scrollY / 800) + 2, ctx, { strokeStyle: 'rgb(0, 210, 247)', lineWidth: 15});
-    drawPolarFunction(sinPolarFunction,  (window.scrollY / 800) + 2, ctx, { strokeStyle: 'rgb(0, 210, 247))', lineWidth: 25});
+    //drawPolarFunction(tanPolarFunction,  (window.scrollY / 800) + 2, ctx, { strokeStyle: 'rgb(0, 210, 247)', lineWidth: 15});
+    //drawPolarFunction(sinPolarFunction,  (window.scrollY / 800) + 2, ctx, { strokeStyle: 'rgb(0, 210, 247))', lineWidth: 25});
     
     const characters = [..."~`!@#$%^&*_+=<>;:'[]{}()/?|1234567890"];
     
@@ -104,7 +104,7 @@ const skillContainers = document.querySelectorAll('.skillContainer');
 
 
 // Scroll-based control for animations
-skillsFlex.addEventListener('scroll', () => {
+/*skillsFlex.addEventListener('scroll', () => {
     const maxScroll = skillsFlex.scrollWidth - skillsFlex.clientWidth;
     const scrollPercentage = skillsFlex.scrollRight / maxScroll;
 
@@ -119,7 +119,7 @@ skillsFlex.addEventListener('scroll', () => {
         x += 1.5;
     });
     skillContainers.forEach(skill => skill.style.animationPlayState = 'running');
-});
+});*/
 
 
 
@@ -172,21 +172,31 @@ function sinPolarFunction(theta, n) {
     return 2*Math.sin (n);
 }
 
+
 // Update both graphs on scroll
-window.addEventListener('scroll', () => {
+/*window.addEventListener('scroll', () => {
     const n = (window.scrollY / 800) + 2;
 
     // Clear the canvas before redrawing
     ctx.clearRect(0, 0, width, height);
 
     // Draw both graphs with different styles
+    drawPolarFunction(tanPolarFunction, n, ctx, { strokeStyle: 'rgb(0, 210, 247)', lineWidth: 5});
+    drawPolarFunction(sinPolarFunction, n, ctx, { strokeStyle: 'rgb(0, 210, 247)', lineWidth: 15});
+});*/
+
+let bgCounter = 3;
+
+setInterval(() => {
+    bgCounter+= 0.0003;
+    let n = 10*Math.sin(bgCounter)+1;
+    ctx.clearRect(0, 0, width, height);
+    
+
     drawPolarFunction(tanPolarFunction, n, ctx, { strokeStyle: 'rgb(0, 210, 247)', lineWidth: 15});
     drawPolarFunction(sinPolarFunction, n, ctx, { strokeStyle: 'rgb(0, 210, 247)', lineWidth: 25});
-});
+
+}, 10)
 
 
 
-// Debug scroll position
-setInterval(() => {
-    console.log(window.scrollY);
-}, 1000);
