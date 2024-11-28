@@ -109,3 +109,9 @@
 .techImageContainer:hover {
     transform: translateY(-10px) scale(125%);
 }
+
+.projPage.flexBox {
+    width: 80vw;
+    transform: translateX(10vw);
+    justify-content: space-evenly;
+}

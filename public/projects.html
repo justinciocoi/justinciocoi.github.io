@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/skills.css">
     <link rel="stylesheet" href="styles/experience.css">
     <link rel="stylesheet" href="styles/projectPage.css">
+    <link rel="stylesheet" href="styles/imageGallery.css">
 
 
 </head>
@@ -62,31 +63,61 @@
 
 
    
-    <div class="flexBox" id="webAppSection">
-        <div id="webAppFlex" class="hFlexBox projPageBoxFlex">
+    <div class="flexBox">
+        <div class="hFlexBox projPageBoxFlex">
             
             
             <div class="projPageBox">
-                <div class="projPageBoxLabel">Pomodoro Timer</div>
+                <div class="projPageBoxLabel">Haptic Metronome</div>
                 <div class="projectPageFlex hFlexBox">
-                    <div>
+                    <div class="flexbox">
                         
-                        <img class="projPageBoxImg" src="https://i.imgur.com/2Ks2ZMT.jpeg">
+                        <img class="projPageBoxImg" src="https://i.imgur.com/1qkkftz.png">
                         <div class="projPageImgContainer">
-                            <img src="img/logos/pythonblue.png" class="projPageTechImg">
-                            <img src="img/logos/htmlblue.png" class="projPageTechImg">
-                            <img src="img/logos/cssblue.png" class="projPageTechImg">
+                            <div class="flexbox">
+                                <img src="img/logos/swiftblue.png" class="projPageTechImg">
+                                <div class="tinyLabel">
+                                    Swift
+                                </div>
+                            </div>
+                            <div class="flexbox">
+                                <img src="img/logos/watchkitblue.png" class="projPageTechImg">
+                                <div class="tinyLabel">
+                                    WatchKit
+                                </div>
+                            </div>
+                            <div class="flexbox">
+                                <img src="img/logos/xcodeblue.png" class="projPageTechImg">
+                                <div class="tinyLabel">
+                                    XCode
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projPage galleryContainer">
+                            <div id="galleryWrapper" class="galleryImageContainer">
+                                <div class="galleryImage">
+                                    <img class="projPageImageGalleryImg" src="https://i.imgur.com/1qkkftz.png">
+                                </div>
+                                <div class="galleryImage">
+                                    <img class="projPageImageGalleryImg" src="https://i.imgur.com/334hWsI.png">
+                                </div>
+                                <div class="galleryImage">
+                                    <img class="projPageImageGalleryImg" src="https://i.imgur.com/u12HGFO.png">
+                                </div>
+                            </div>
+                            <button class="arrow left projPage" onclick="slideGallery(-1)">&#8249;</button>
+    
+                            <button class="arrow right projPage" onclick="slideGallery(1)">&#8250;</button>
                         </div>
                     </div>
                     <div class="projPageDescription">
                         <div class="projPageDescriptionText">
-                            Lorem ipsum dolor sit amet consectetur adipisicing 
-                            elit. Sunt et sit tempore nemo quidem mollitia, laboriosam,
-                            explicabo sapiente, minima rerum repudiandae molestias. Ad 
-                            enim obcaecati perferendis cum tenetur perspiciatis eum?
+                            A Haptic Metronome App designed for the Apple Watch using SwiftUI and WatchKit.
+                            The app allows users to enter BPM manually or quickly adjust it by +/- 5 BPM.
+                            XCode command line utilities and core emulation were used for setup and testing.
                         </div>
                         <div class="techLinkImageContainer">
-                            <a href="https://github.com/justinciocoi/dai-li" target="_blank">
+                            <a href="https://github.com/justinciocoi/apple-watch-haptic-metronome" target="_blank">
                                 <img class="projLinkImg" src="img/logos/sourcebuttonblue.png">
                             </a>
                         </div>
@@ -94,26 +125,48 @@
                 </div>
             </div>
             <div class="projPageBox">
-                <div class="projPageBoxLabel">Pomodoro Timer</div>
+                <div class="projPageBoxLabel">Online Video Formatter</div>
                 <div class="projectPageFlex hFlexBox">
-                    <div>
+                    <div class="flexbox">
                         
-                        <img class="projPageBoxImg" src="https://i.imgur.com/2Ks2ZMT.jpeg">
+                        <img class="projPageBoxImg" src="https://i.imgur.com/hOCqsep.png">
                         <div class="projPageImgContainer">
-                            <img src="img/logos/pythonblue.png" class="projPageTechImg">
-                            <img src="img/logos/htmlblue.png" class="projPageTechImg">
-                            <img src="img/logos/cssblue.png" class="projPageTechImg">
+                            <div class="flexbox">
+                                <img src="img/logos/pythonblue.png" class="projPageTechImg">
+                                <div class="tinyLabel">
+                                    Python
+                                </div>
+                            </div>
+                            <div class="flexbox">
+                                <img src="img/logos/bashblue.png" class="projPageTechImg">
+                                <div class="tinyLabel">
+                                    BASH
+                                </div>
+                            </div>
+                            <div class="flexbox">
+                                <img src="img/logos/ffmpegblue.png" class="projPageTechImg">
+                                <div class="tinyLabel">
+                                    FFMPEG
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projPage galleryContainer">
+                            <div id="galleryWrapper" class="galleryImageContainer">
+                                <div class="galleryImage">
+                                    <img class="projPageImageGalleryImg" src="https://i.imgur.com/hOCqsep.png">
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="projPageDescription">
                         <div class="projPageDescriptionText">
-                            Lorem ipsum dolor sit amet consectetur adipisicing 
-                            elit. Sunt et sit tempore nemo quidem mollitia, laboriosam,
-                            explicabo sapiente, minima rerum repudiandae molestias. Ad 
-                            enim obcaecati perferendis cum tenetur perspiciatis eum?
+                            An online video formatter which uses yt-dlp and ffmpeg along with Python to create a frontend UI
+                            that runs locally and allows users to download and format videos from publicly accessible sites.
+                            If you regularly download the audio or video of online videos, this tool can help you avoid similar sites
+                            filled with ads and potential malware.
                         </div>
                         <div class="techLinkImageContainer">
-                            <a href="https://github.com/justinciocoi/dai-li" target="_blank">
+                            <a href="https://github.com/justinciocoi/yt_formatter" target="_blank">
                                 <img class="projLinkImg" src="img/logos/sourcebuttonblue.png">
                             </a>
                         </div>
@@ -121,210 +174,394 @@
                 </div>
             </div>
             <div class="projPageBox">
-                <div class="projPageBoxLabel">Pomodoro Timer</div>
+                <div class="projPageBoxLabel">Daily Dashboard</div>
                 <div class="projectPageFlex hFlexBox">
-                    <div>
+                    <div class="flexbox">
                         
-                        <img class="projPageBoxImg" src="https://i.imgur.com/2Ks2ZMT.jpeg">
+                        <img class="projPageBoxImg" src="https://i.imgur.com/MYKwgJN.jpeg">
                         <div class="projPageImgContainer">
-                            <img src="img/logos/pythonblue.png" class="projPageTechImg">
-                            <img src="img/logos/htmlblue.png" class="projPageTechImg">
-                            <img src="img/logos/cssblue.png" class="projPageTechImg">
+                            <div class="flexbox">
+                                <img src="img/logos/htmlblue.png" class="projPageTechImg">
+                                <div class="tinyLabel">
+                                    HTML
+                                </div>
+                            </div>
+                            <div class="flexbox">
+                                <img src="img/logos/cssblue.png" class="projPageTechImg">
+                                <div class="tinyLabel">
+                                    CSS
+                                </div>
+                            </div>
+                            <div class="flexbox">
+                                <img src="img/logos/jsblue.png" class="projPageTechImg">
+                                <div class="tinyLabel">
+                                    JavaScript
+                                </div>
+                            </div>
+                            <div class="flexbox">
+                                <img src="img/logos/awsblue.png" class="projPageTechImg">
+                                <div class="tinyLabel">
+                                    AWS
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projPage galleryContainer">
+                            <div id="galleryWrapper" class="galleryImageContainer">
+                                <div class="galleryImage">
+                                    <img class="projPageImageGalleryImg" src="https://i.imgur.com/MYKwgJN.jpeg">
+                                </div>
+                                <div class="galleryImage">
+                                    <img class="projPageImageGalleryImg" src="https://i.imgur.com/Em9et9J.jpeg">
+                                </div>
+                            </div>
+                            <button class="arrow left projPage" onclick="slideGallery(-1)">&#8249;</button>
+    
+                            <button class="arrow right projPage" onclick="slideGallery(1)">&#8250;</button>
                         </div>
                     </div>
                     <div class="projPageDescription">
                         <div class="projPageDescriptionText">
-                            Lorem ipsum dolor sit amet consectetur adipisicing 
-                            elit. Sunt et sit tempore nemo quidem mollitia, laboriosam,
-                            explicabo sapiente, minima rerum repudiandae molestias. Ad 
-                            enim obcaecati perferendis cum tenetur perspiciatis eum?
+                            A daily dashboard I designed to be my landing page on my mobile browser.
+                            This utilizes weather and news APIs to query current data and populate the webpage,
+                            as well as generating a random quote from an AWS hosted mySQL database and providing
+                            links to my most visited sites. Find the dashboard <a href="https://simpledashboard.onrender.com/">here</a>.
                         </div>
                         <div class="techLinkImageContainer">
-                            <a href="https://github.com/justinciocoi/dai-li" target="_blank">
+                            <a href="https://github.com/justinciocoi/simpleDashboard" target="_blank">
                                 <img class="projLinkImg" src="img/logos/sourcebuttonblue.png">
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-            
-        </div>
-    </div>
-    <div class="flexBox" id="webAppSection">
-        <div id="webAppFlex" class="hFlexBox projPageBoxFlex">
-            
-            
-            <div class="projPageBox">
-                <div class="projPageBoxLabel">Pomodoro Timer</div>
-                <div class="projectPageFlex hFlexBox">
-                    <div>
-                        
-                        <img class="projPageBoxImg" src="https://i.imgur.com/2Ks2ZMT.jpeg">
-                        <div class="projPageImgContainer">
-                            <img src="img/logos/pythonblue.png" class="projPageTechImg">
-                            <img src="img/logos/htmlblue.png" class="projPageTechImg">
-                            <img src="img/logos/cssblue.png" class="projPageTechImg">
-                        </div>
-                    </div>
-                    <div class="projPageDescription">
-                        <div class="projPageDescriptionText">
-                            Lorem ipsum dolor sit amet consectetur adipisicing 
-                            elit. Sunt et sit tempore nemo quidem mollitia, laboriosam,
-                            explicabo sapiente, minima rerum repudiandae molestias. Ad 
-                            enim obcaecati perferendis cum tenetur perspiciatis eum?
-                        </div>
-                        <div class="techLinkImageContainer">
-                            <a href="https://github.com/justinciocoi/dai-li" target="_blank">
-                                <img class="projLinkImg" src="img/logos/sourcebuttonblue.png">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="projPageBox">
-                <div class="projPageBoxLabel">Pomodoro Timer</div>
-                <div class="projectPageFlex hFlexBox">
-                    <div>
-                        
-                        <img class="projPageBoxImg" src="https://i.imgur.com/2Ks2ZMT.jpeg">
-                        <div class="projPageImgContainer">
-                            <img src="img/logos/pythonblue.png" class="projPageTechImg">
-                            <img src="img/logos/htmlblue.png" class="projPageTechImg">
-                            <img src="img/logos/cssblue.png" class="projPageTechImg">
-                        </div>
-                    </div>
-                    <div class="projPageDescription">
-                        <div class="projPageDescriptionText">
-                            Lorem ipsum dolor sit amet consectetur adipisicing 
-                            elit. Sunt et sit tempore nemo quidem mollitia, laboriosam,
-                            explicabo sapiente, minima rerum repudiandae molestias. Ad 
-                            enim obcaecati perferendis cum tenetur perspiciatis eum?
-                        </div>
-                        <div class="techLinkImageContainer">
-                            <a href="https://github.com/justinciocoi/dai-li" target="_blank">
-                                <img class="projLinkImg" src="img/logos/sourcebuttonblue.png">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="projPageBox">
-                <div class="projPageBoxLabel">Pomodoro Timer</div>
-                <div class="projectPageFlex hFlexBox">
-                    <div>
-                        
-                        <img class="projPageBoxImg" src="https://i.imgur.com/2Ks2ZMT.jpeg">
-                        <div class="projPageImgContainer">
-                            <img src="img/logos/pythonblue.png" class="projPageTechImg">
-                            <img src="img/logos/htmlblue.png" class="projPageTechImg">
-                            <img src="img/logos/cssblue.png" class="projPageTechImg">
-                        </div>
-                    </div>
-                    <div class="projPageDescription">
-                        <div class="projPageDescriptionText">
-                            Lorem ipsum dolor sit amet consectetur adipisicing 
-                            elit. Sunt et sit tempore nemo quidem mollitia, laboriosam,
-                            explicabo sapiente, minima rerum repudiandae molestias. Ad 
-                            enim obcaecati perferendis cum tenetur perspiciatis eum?
-                        </div>
-                        <div class="techLinkImageContainer">
-                            <a href="https://github.com/justinciocoi/dai-li" target="_blank">
-                                <img class="projLinkImg" src="img/logos/sourcebuttonblue.png">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-    <div class="flexBox" id="webAppSection">
-        <div id="webAppFlex" class="hFlexBox projPageBoxFlex">
-            
-            
-            <div class="projPageBox">
-                <div class="projPageBoxLabel">Pomodoro Timer</div>
-                <div class="projectPageFlex hFlexBox">
-                    <div>
-                        
-                        <img class="projPageBoxImg" src="https://i.imgur.com/2Ks2ZMT.jpeg">
-                        <div class="projPageImgContainer">
-                            <img src="img/logos/pythonblue.png" class="projPageTechImg">
-                            <img src="img/logos/htmlblue.png" class="projPageTechImg">
-                            <img src="img/logos/cssblue.png" class="projPageTechImg">
-                        </div>
-                    </div>
-                    <div class="projPageDescription">
-                        <div class="projPageDescriptionText">
-                            Lorem ipsum dolor sit amet consectetur adipisicing 
-                            elit. Sunt et sit tempore nemo quidem mollitia, laboriosam,
-                            explicabo sapiente, minima rerum repudiandae molestias. Ad 
-                            enim obcaecati perferendis cum tenetur perspiciatis eum?
-                        </div>
-                        <div class="techLinkImageContainer">
-                            <a href="https://github.com/justinciocoi/dai-li" target="_blank">
-                                <img class="projLinkImg" src="img/logos/sourcebuttonblue.png">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="projPageBox">
-                <div class="projPageBoxLabel">Pomodoro Timer</div>
-                <div class="projectPageFlex hFlexBox">
-                    <div>
-                        
-                        <img class="projPageBoxImg" src="https://i.imgur.com/2Ks2ZMT.jpeg">
-                        <div class="projPageImgContainer">
-                            <img src="img/logos/pythonblue.png" class="projPageTechImg">
-                            <img src="img/logos/htmlblue.png" class="projPageTechImg">
-                            <img src="img/logos/cssblue.png" class="projPageTechImg">
-                        </div>
-                    </div>
-                    <div class="projPageDescription">
-                        <div class="projPageDescriptionText">
-                            Lorem ipsum dolor sit amet consectetur adipisicing 
-                            elit. Sunt et sit tempore nemo quidem mollitia, laboriosam,
-                            explicabo sapiente, minima rerum repudiandae molestias. Ad 
-                            enim obcaecati perferendis cum tenetur perspiciatis eum?
-                        </div>
-                        <div class="techLinkImageContainer">
-                            <a href="https://github.com/justinciocoi/dai-li" target="_blank">
-                                <img class="projLinkImg" src="img/logos/sourcebuttonblue.png">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="projPageBox">
-                <div class="projPageBoxLabel">Pomodoro Timer</div>
-                <div class="projectPageFlex hFlexBox">
-                    <div>
-                        
-                        <img class="projPageBoxImg" src="https://i.imgur.com/2Ks2ZMT.jpeg">
-                        <div class="projPageImgContainer">
-                            <img src="img/logos/pythonblue.png" class="projPageTechImg">
-                            <img src="img/logos/htmlblue.png" class="projPageTechImg">
-                            <img src="img/logos/cssblue.png" class="projPageTechImg">
-                        </div>
-                    </div>
-                    <div class="projPageDescription">
-                        <div class="projPageDescriptionText">
-                            Lorem ipsum dolor sit amet consectetur adipisicing 
-                            elit. Sunt et sit tempore nemo quidem mollitia, laboriosam,
-                            explicabo sapiente, minima rerum repudiandae molestias. Ad 
-                            enim obcaecati perferendis cum tenetur perspiciatis eum?
-                        </div>
-                        <div class="techLinkImageContainer">
-                            <a href="https://github.com/justinciocoi/dai-li" target="_blank">
-                                <img class="projLinkImg" src="img/logos/sourcebuttonblue.png">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
             
         </div>
+        <div class="hFlexBox projPageBoxFlex">
+            
+            
+            <div class="projPageBox">
+                <div class="projPageBoxLabel">2D Game Engine</div>
+                <div class="projectPageFlex hFlexBox">
+                    <div class="flexbox">
+                        
+                        <img class="projPageBoxImg" src="img/game.gif">
+                        <div class="projPageImgContainer">
+                            <div class="flexbox">
+                                <img src="img/logos/pythonblue.png" class="projPageTechImg">
+                                <div class="tinyLabel">
+                                    Python
+                                </div>
+                            </div>
+                            <div class="flexbox">
+                                <img src="img/logos/pyqtblue.png" class="projPageTechImg">
+                                <div class="tinyLabel">
+                                    PyQT
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projPage galleryContainer">
+                            <img class="projPageImageGalleryGif" src="img/game.gif">
+                        </div>
+                    </div>
+                    <div class="projPageDescription">
+                        <div class="projPageDescriptionText">
+                            A very basic 2D game engine developed using the pygame and pillow libraries.
+                            The engine includes animated sprites, player movement, player attacking, and enemy tracking
+                        </div>
+                        <div class="techLinkImageContainer">
+                            <a href="https://github.com/justinciocoi/2d-Game-Engine" target="_blank">
+                                <img class="projLinkImg" src="img/logos/sourcebuttonblue.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projPageBox">
+                <div class="projPageBoxLabel">img-to-ascii</div>
+                <div class="projectPageFlex hFlexBox">
+                    <div class="flexbox">
+                        
+                        <img class="projPageBoxImg" src="https://i.imgur.com/YQxSZqg.jpeg">
+                        <div class="projPageImgContainer">
+                            <div class="flexbox">
+                                <img src="img/logos/pythonblue.png" class="projPageTechImg">
+                                <div class="tinyLabel">
+                                    Python
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projPage galleryContainer">
+                            <div id="galleryWrapper" class="galleryImageContainer">
+                                <div class="galleryImage">
+                                    <img class="projPageImageGalleryImg" src="https://i.imgur.com/u6M4ycA.jpeg">
+                                </div>
+                                <div class="galleryImage">
+                                    <img class="projPageImageGalleryImg" src="https://i.imgur.com/QE4wUFQ.jpeg">
+                                </div>
+                                <div class="galleryImage">
+                                    <img class="projPageImageGalleryImg" src="https://i.imgur.com/wB7v9r7.jpeg">
+                                </div>
+                                <div class="galleryImage">
+                                    <img class="projPageImageGalleryImg" src="https://i.imgur.com/YQxSZqg.jpeg">
+                                </div>
+                                <div class="galleryImage">
+                                    <img class="projPageImageGalleryImg" src="https://i.imgur.com/F3AyY0q.jpeg">
+                                </div>
+                                <div class="galleryImage">
+                                    <img class="projPageImageGalleryImg" src="https://i.imgur.com/oM79vN0.jpeg">
+                                </div>
+                            </div>
+                            <button class="arrow left projPage" onclick="slideGallery(-1)">&#8249;</button>
+    
+                            <button class="arrow right projPage" onclick="slideGallery(1)">&#8250;</button>
+                        </div>
+                    </div>
+                    <div class="projPageDescription">
+                        <div class="projPageDescriptionText">
+                            A python script developed to convert image data to ascii text that resembles the image data 
+                            as closely as possible. Uses the pillow library.
+                        </div>
+                        <div class="techLinkImageContainer">
+                            <a href="https://github.com/justinciocoi/singleFileProjects" target="_blank">
+                                <img class="projLinkImg" src="img/logos/sourcebuttonblue.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projPageBox">
+                <div class="projPageBoxLabel">Knicks Data Project</div>
+                <div class="projectPageFlex hFlexBox">
+                    <div class="flexbox">
+                        
+                        <img class="projPageBoxImg" src="https://i.imgur.com/EnZ4rQ9.jpeg">
+                        <div class="projPageImgContainer">
+                            <div class="flexbox">
+                                <img src="img/logos/mySQLblue.png" class="projPageTechImg">
+                                <div class="tinyLabel">
+                                    MySQL
+                                </div>
+                            </div>
+                            <div class="flexbox">
+                                <img src="img/logos/htmlblue.png" class="projPageTechImg">
+                                <div class="tinyLabel">
+                                    HTML
+                                </div>
+                            </div>
+                            <div class="flexbox">
+                                <img src="img/logos/cssblue.png" class="projPageTechImg">
+                                <div class="tinyLabel">
+                                    CSS
+                                </div>
+                            </div>
+                            <div class="flexbox">
+                                <img src="img/logos/jsblue.png" class="projPageTechImg">
+                                <div class="tinyLabel">
+                                    JavaScript
+                                </div>
+                            </div>
+                            <div class="flexbox">
+                                <img src="img/logos/awsblue.png" class="projPageTechImg">
+                                <div class="tinyLabel">
+                                    AWS
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projPage galleryContainer">
+                            <div id="galleryWrapper" class="galleryImageContainer">
+                                <div class="galleryImage">
+                                    <img class="projPageImageGalleryImg" src="https://i.imgur.com/Q1wtbfd.jpeg">
+                                </div>
+                                <div class="galleryImage">
+                                    <img class="projPageImageGalleryImg" src="https://i.imgur.com/EnZ4rQ9.jpeg">
+                                </div>
+                                <div class="galleryImage">
+                                    <img class="projPageImageGalleryImg" src="https://i.imgur.com/8oOVDG4.jpeg">
+                                </div>
+                            </div>
+                            <button class="arrow left projPage" onclick="slideGallery(-1)">&#8249;</button>
+    
+                            <button class="arrow right projPage" onclick="slideGallery(1)">&#8250;</button>
+                        </div>
+                    </div>
+                    <div class="projPageDescription">
+                        <div class="projPageDescriptionText">
+                            This project is a dashboard for stats for the New York Knicks 2023-2024 season. 
+                            The frontend is created using Node.JS and the database is hosted using AWS services. 
+                            The project includes dynamic stat tables and data analysis and can be found 
+                            <a href="https://two023-24-new-york-knicks-data-project.onrender.com/" target="blank">here</a>
+                            (Site is hosted using a free Render instance, so loading may take some time) 
+                        </div>
+                        <div class="techLinkImageContainer">
+                            <a href="https://github.com/justinciocoi/2023-24-New-York-Knicks-Data-Project" target="_blank">
+                                <img class="projLinkImg" src="img/logos/sourcebuttonblue.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            
+        </div>
+        <div class="hFlexBox projPageBoxFlex">
+            
+            
+            <div class="projPageBox">
+                <div class="projPageBoxLabel">Dai-Li</div>
+                <div class="projectPageFlex hFlexBox">
+                    <div class="flexbox">
+                        
+                        <img class="projPageBoxImg" src="https://i.imgur.com/kW4gU5u.jpeg">
+                        <div class="projPageImgContainer">
+                            <div class="flexbox">
+                                <img src="img/logos/pythonblue.png" class="projPageTechImg">
+                                <div class="tinyLabel">
+                                    Python
+                                </div>
+                            </div>
+                            <div class="flexbox">
+                                <img src="img/logos/pyqtblue.png" class="projPageTechImg">
+                                <div class="tinyLabel">
+                                    PyQT
+                                </div>
+                            </div>
+                            <div class="flexbox">
+                                <img src="img/logos/jsonblue.png" class="projPageTechImg">
+                                <div class="tinyLabel">
+                                    JSON
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projPage galleryContainer">
+                            <div id="galleryWrapper" class="galleryImageContainer">
+                                <div class="galleryImage">
+                                    <img class="projPageImageGalleryImg" src="https://i.imgur.com/PH5MBsA.jpeg">
+                                </div>
+                                <div class="galleryImage">
+                                    <img class="projPageImageGalleryImg" src="https://i.imgur.com/iOHYYqO.jpeg">
+                                </div>
+                                <div class="galleryImage">
+                                    <img class="projPageImageGalleryImg" src="https://i.imgur.com/kW4gU5u.jpeg">
+                                </div>
+                                <div class="galleryImage">
+                                    <img class="projPageImageGalleryImg" src="https://i.imgur.com/mvnFG3h.jpeg">
+                                </div>
+                            </div>
+                            <button class="arrow left projPage" onclick="slideGallery(-1)">&#8249;</button>
+    
+                            <button class="arrow right projPage" onclick="slideGallery(1)">&#8250;</button>
+                        </div>
+                    </div>
+                    <div class="projPageDescription">
+                        <div class="projPageDescriptionText">
+                            Dai-Li is a simple python-based task tracker which keeps track
+                            of repeating tasks. Dai-Li has tabs for daily, weekly,
+                            and monthly tasks, and uses JSON for saving task data.
+                        </div>
+                        <div class="techLinkImageContainer">
+                            <a href="https://github.com/justinciocoi/dai-li" target="_blank">
+                                <img class="projLinkImg" src="img/logos/sourcebuttonblue.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projPageBox">
+                <div class="projPageBoxLabel">MonkeyType</div>
+                <div class="projectPageFlex hFlexBox">
+                    <div class="flexbox">
+                        
+                        <img class="projPageBoxImg" src="https://i.imgur.com/vNakf57.jpeg">
+                        <div class="projPageImgContainer">
+                            <div class="flexbox">
+                                <img src="img/logos/cppblue.png" class="projPageTechImg">
+                                <div class="tinyLabel">
+                                    C++
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projPage galleryContainer">
+                            <div id="galleryWrapper" class="galleryImageContainer">
+                                <div class="galleryImage">
+                                    <img class="projPageImageGalleryImg" src="https://i.imgur.com/vNakf57.jpeg">
+                                </div>
+                                <div class="galleryImage">
+                                    <img class="projPageImageGalleryImg" src="https://i.imgur.com/zMoNguc.jpeg">
+                                </div>
+                            </div>
+                            <button class="arrow left projPage" onclick="slideGallery(-1)">&#8249;</button>
+    
+                            <button class="arrow right projPage" onclick="slideGallery(1)">&#8250;</button>
+                        </div>
+                    </div>
+                    <div class="projPageDescription">
+                        <div class="projPageDescriptionText">
+                            Based on the idea that - given infinite time - could write out the entire works
+                            of Shakespeare, Monkey Type allows users to enter a text input and then generates
+                            text (a-z|A-Z) until the entered string is also generated. 
+                        </div>
+                        <div class="techLinkImageContainer">
+                            <a href="https://github.com/justinciocoi/singleFileProjects" target="_blank">
+                                <img class="projLinkImg" src="img/logos/sourcebuttonblue.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projPageBox">
+                <div class="projPageBoxLabel">Password Vault</div>
+                <div class="projectPageFlex hFlexBox">
+                    <div class="flexbox">
+                        
+                        <img class="projPageBoxImg" src="https://i.imgur.com/Fn2hhjE.png">
+                        <div class="projPageImgContainer">
+                            <div class="flexbox">
+                                <img src="img/logos/bashblue.png" class="projPageTechImg">
+                                <div class="tinyLabel">
+                                    BASH
+                                </div>
+                            </div>
+                            <div class="flexbox">
+                                <img src="img/logos/aesblue.png" class="projPageTechImg">
+                                <div class="tinyLabel">
+                                    AES
+                                </div>
+                            </div>
+                            <div class="flexbox">
+                                <img src="img/logos/sshblue.png" class="projPageTechImg">
+                                <div class="tinyLabel">
+                                    SSH
+                                </div>
+                            </div>
+                        </div>
+                        <div class="projPage galleryContainer">
+                            <div id="galleryWrapper" class="galleryImageContainer">
+                                <div class="galleryImage">
+                                    <img class="projPageImageGalleryImg" src="https://i.imgur.com/Fn2hhjE.png">
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="projPageDescription">
+                        <div class="projPageDescriptionText">
+                            Password Vault is a set of bash/zsh scripts which allows a user to set up 
+                            a home server on which they can encrypt and store data using AES and SSH. 
+                            Data is encrypted on a local machine using AES and securely transmitted using SSH. 
+                        </div>
+                        <div class="techLinkImageContainer">
+                            <a href="https://github.com/justinciocoi/passwordVault" target="_blank">
+                                <img class="projLinkImg" src="img/logos/sourcebuttonblue.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            
+        </div>
+        
     </div>
     
 
@@ -344,7 +581,7 @@
         </div>
     </div>
     <script src="main.js"></script>
-    <script>
+    <script src="function/imageGallery.js">
         
     </script>
 </body>
