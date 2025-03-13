@@ -95,6 +95,13 @@
 
 .resumeButton:hover #resumeFlex {
     transform: scale(130%);
+    
+    background-color: rgb(0,210,247);
+}
+
+.resumeButton:hover #resumeLabel {
+    color: black;
+    transform: translateX(-5px); 
 }
 
 .experienceLabel {

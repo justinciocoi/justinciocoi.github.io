@@ -22,6 +22,16 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 })
 
+const resumeBox = document.getElementById('resumeFlex')
+
+resumeBox.addEventListener('mouseover', () => {
+    document.getElementById('resumeImageChange').src = "img/icons/resume.png"
+})
+
+resumeBox.addEventListener('mouseout', () => {
+    document.getElementById('resumeImageChange').src = "img/icons/resumeblue.png"
+})
+
 
 document.addEventListener('DOMContentLoaded', function() {
     var cipherText = document.getElementById('name');
