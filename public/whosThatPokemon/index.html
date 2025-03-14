@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who's that Pokémon</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <div id="pokemonName"></div>
+</head>
+<body id="body">
+    <div id="effect"></div>
+    <div id="links">
+        <a target="_blank" href="https://github.com/justinciocoi/whosThatPokemon">
+            <img class="icon" src="https://github.com/justinciocoi/justinciocoi.github.io/blob/main/public/img/githubblue.png?raw=true">
+        </a>
+        <a target="_blank" href="https://jciocoi.com">
+            <img class="icon"src="https://github.com/justinciocoi/justinciocoi.github.io/blob/main/public/img/personblue.png?raw=true">
+        </a>
+    </div>
+    
+    <div id="backgroundFlex">
+        <div id="backgroundDiv">
+        </div>
+    </div>
+
+    <div class="outerFlex">
+        <div class="innerFlex" id="topLeft"></div>
+        <div class="innerFlex" id="topCenter">
+            <div id="whosThat" class="title">
+                Who's That
+                <img id="pokemonLogo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1200px-International_Pok%C3%A9mon_logo.svg.png">
+            </div>
+        </div>
+        <div class="innerFlex" id="topRight"></div>
+    </div>
+
+
+    <div id="centerRow" class="outerFlex">
+        <div class="innerFlex" id="centerLeft">
+            <button id="refreshButton" onclick="revealAnswer()">Reveal Pokémon</button>
+
+        </div>
+
+        <div class="innerFlex" id="centerCenter">
+            <div class="title" id="answer">ANSWER</div>
+            <div id="silhouette">
+                <img id="pokemonImage" src="">
+                
+            </div>
+            <div id="pokemonImage2Container">
+                <img id="pokemonImage2" src="">
+            </div>
+        </div>
+
+        <div class="innerFlex" id="centerRight">
+            <div id="percentageTracker">
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="outerFlex">
+        <div class="innerFlex" id="bottomLeft">
+            <div id="disclaimer">
+                This app is not affiliated, endorsed or supported by Nintendo, GameFreak, or The Pokemon Company International (TPCi) in any way.
+                Use of images is supported under fair use, as this site is an educational resource and is not monetized. 
+                Pokemon, Pokemon likenesses and Pokemon character names are trademark of Nintendo. Pokemon © 2002-2025 Pokemon.
+            </div>
+        </div>
+        <div class="innerFlex" id="bottomCenter">
+            <input placeholder="Enter Pokémon" id="guess">
+        </div>
+        <div class="innerFlex" id="bottomRight"></div>
+    </div>
+    <script src="function/backgroundFormat.js"></script>
+    <script src="function/apiCall.js"></script>
+</body>
+</html>
