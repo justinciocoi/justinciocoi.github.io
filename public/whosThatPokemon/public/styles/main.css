@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Nerko+One&family=Rubik+Iso&display=swap');
+
+body {
+      background-color: rgb(159, 26, 26);
+      overflow: hidden;
+}
+
+.backgroundImage {
+    position: absolute;
+    opacity: 0.22;
+    background-color: rgb(119, 154, 184);
+    height: 80px;
+    width: 5000px;
+}
+
+.title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 64px;
+    font-family: 'Nerko One';
+    color: rgb(141, 177, 208);
+    transform: translateY(5vh);
+    text-shadow: 2px 2px white;
+}
+
+#pokemonLogo {
+    width: 33vw;
+    max-width: 355px;
+}
+
+#topCenter {
+    display: flex;
+    justify-content: center;
+}
+
+#pokemonName {
+    display: none
+}
+
+#backgroundFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#backgroundDiv {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: -10;
+}
+
+.outerFlex {
+    height: 33vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.innerFlex {
+    height: 25vh;
+    width: 25vw;
+
+}
+
+#centerRow {
+    height: 50vh;
+}
+
+#bottomCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#silhouette {
+
+    display: flex;
+    justify-content: center;
+    /* Your chosen silhouette color */
+    
+    /* Example size—adjust as needed */
+    height: 475px;
+    width: 475px;
+    mask-repeat: no-repeat;
+    z-index: 4;
+    transition: all 1s;
+  }
+
+  #centerCenter {
+    width: auto;
+    height: 475px;
+  }
+
+  #refreshButton {
+    height: 100px;
+    width: 200px;
+    border-radius: 50px;
+    
+    border: solid 2px rgb(184, 184, 119)
+  }
+
+  #hintButton {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    scale: 60%;
+    border: solid 2px rgb(184, 184, 119)
+  }
+
+  button {
+    font-family: "Nerko One";
+    font-size: 35px;
+    transition: all 1s ease;
+    background-color: rgb(200, 102, 102);
+    color: white;
+  }
+
+  #centerRight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 475px;
+    color: rgb(119, 154, 184);
+    text-shadow: 2px 2px white;
+    font-size: 50px;
+    font-family: 'Nerko One';
+  }
+
+  button:hover {
+    transform: translateY(-10px);
+    background-color: rgb(125, 53, 53);
+    color: rgb(119, 154, 184);
+    text-shadow: 2px 2px white;
+  }
+
+  #centerLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 475px;
+  }
+
+
+
+  #pokemonImage2Container {
+    transition: all 1.5s ease;
+    transform: translateY(1000px);
+  }
+
+  
+
+  #guess {
+    height: 100px;
+    width: 350px;
+    background-color: brown;
+    border:rgb(184, 184, 119) solid 2px;
+    border-radius: 45px;
+    color: rgb(141, 177, 208);
+    text-shadow: 2px 2px white;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Nerko One';
+    transform: translateY(-5vh);
+  }
+
+  #answer {
+    opacity: 0;
+    transition: all 1s;
+    position: absolute;
+    transform: translateY(-40px);
+    z-index: 10;
+  }
+
+  .icon {
+    height: 50px;
+    width: 50px;
+    margin: 20px;
+    transition: all 1s;
+    opacity: 0.7
+  }
+
+  .icon:hover {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+
+  #links {
+    position: fixed;
+    margin: 20px;
+    display: flex;
+  }
+
+  #whosThat {
+    color: #FACC04;
+    text-shadow:7px 4px #2F68B3;
+  }
+
+  #effect {
+    background-color: rgba(0, 0, 0, 0);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    margin-left: -8px;
+    margin-top: -8px;
+    transition: all 1s;
+    z-index: -100;
+  }
+
+  #disclaimer {
+    font-family: sans-serif;
+    font-size: 10px;
+    width: 200px;
+    margin-left: -12vw;
+    margin-top: 3vh;
+    color: #FACC04;
+    
+  }
+
+  .type {
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    bottom: 17%;
+    ;
+  }
+
+  #type2 {
+    transform: translateX(371px);
+  }
+
+  .typeimg {
+    opacity: 0;
+    transition: all 1s;
+    transform: translateX(20px) translateY(15px);
+
+  }
